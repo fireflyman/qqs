@@ -1,0 +1,315 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateQqs (20101014023156)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "qqs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "size" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101014023156')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("qqs")[0m
+
+
+Processing QqsController#index (for 127.0.0.1 at 2010-10-14 10:38:42) [GET]
+  [4;36;1mQq Load (0.0ms)[0m   [0;1mSELECT * FROM "qqs" [0m
+Rendering template within layouts/qqs
+Rendering qqs/index
+Completed in 500ms (View: 484, DB: 0) | 200 OK [http://localhost/qqs]
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:38:47) [POST]
+  Parameters: {"size"=>"2", "commit"=>"Get QRCode", "authenticity_token"=>"GeqdeaEjY6lAdL/k/iYYhb3jgQrWoDVqs6zKnyDAgfg=", "url"=>"http://www.google.com/"}
+
+ActionView::MissingTemplate (Missing template qqs/_show.erb in view path app/views):
+  app/controllers/qqs_controller.rb:18:in `show'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:76:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `catch'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:57:in `process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:42:in `receive_data'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run_machine'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/backends/base.rb:57:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/server.rb:156:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/controllers/controller.rb:80:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `send'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `run_command'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:143:in `run!'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/bin/thin:6
+  C:/Ruby187/bin/thin:19:in `load'
+  C:/Ruby187/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:38:52) [POST]
+  Parameters: {"size"=>"2", "commit"=>"Get QRCode", "authenticity_token"=>"GeqdeaEjY6lAdL/k/iYYhb3jgQrWoDVqs6zKnyDAgfg=", "url"=>"http://www.google.com/"}
+
+ActionView::MissingTemplate (Missing template qqs/_show.erb in view path app/views):
+  app/controllers/qqs_controller.rb:18:in `show'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:76:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `catch'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:57:in `process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:42:in `receive_data'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run_machine'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/backends/base.rb:57:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/server.rb:156:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/controllers/controller.rb:80:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `send'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `run_command'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:143:in `run!'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/bin/thin:6
+  C:/Ruby187/bin/thin:19:in `load'
+  C:/Ruby187/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:38:53) [POST]
+  Parameters: {"size"=>"2", "commit"=>"Get QRCode", "authenticity_token"=>"GeqdeaEjY6lAdL/k/iYYhb3jgQrWoDVqs6zKnyDAgfg=", "url"=>"http://www.google.com/"}
+
+ActionView::MissingTemplate (Missing template qqs/_show.erb in view path app/views):
+  app/controllers/qqs_controller.rb:18:in `show'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:76:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `catch'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:57:in `process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:42:in `receive_data'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run_machine'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/backends/base.rb:57:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/server.rb:156:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/controllers/controller.rb:80:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `send'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `run_command'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:143:in `run!'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/bin/thin:6
+  C:/Ruby187/bin/thin:19:in `load'
+  C:/Ruby187/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:39:00) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionView::MissingTemplate (Missing template qqs/_show.erb in view path app/views):
+  app/controllers/qqs_controller.rb:18:in `show'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:76:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `catch'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:57:in `process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:42:in `receive_data'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run_machine'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/backends/base.rb:57:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/server.rb:156:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/controllers/controller.rb:80:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `send'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `run_command'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:143:in `run!'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/bin/thin:6
+  C:/Ruby187/bin/thin:19:in `load'
+  C:/Ruby187/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:39:04) [GET]
+  Parameters: {"id"=>"show"}
+
+ActionView::MissingTemplate (Missing template qqs/_show.erb in view path app/views):
+  app/controllers/qqs_controller.rb:18:in `show'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:76:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `catch'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:57:in `process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:42:in `receive_data'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run_machine'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/backends/base.rb:57:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/server.rb:156:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/controllers/controller.rb:80:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `send'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `run_command'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:143:in `run!'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/bin/thin:6
+  C:/Ruby187/bin/thin:19:in `load'
+  C:/Ruby187/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QqsController#index (for 127.0.0.1 at 2010-10-14 10:39:07) [GET]
+  [4;35;1mQq Load (0.0ms)[0m   [0mSELECT * FROM "qqs" [0m
+Rendering template within layouts/qqs
+Rendering qqs/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/qqs]
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:39:09) [POST]
+  Parameters: {"size"=>"2", "commit"=>"Get QRCode", "authenticity_token"=>"GeqdeaEjY6lAdL/k/iYYhb3jgQrWoDVqs6zKnyDAgfg=", "url"=>"http://www.google.com/"}
+
+ActionView::MissingTemplate (Missing template qqs/_show.erb in view path app/views):
+  app/controllers/qqs_controller.rb:18:in `show'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:76:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `catch'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:57:in `process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:42:in `receive_data'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run_machine'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/backends/base.rb:57:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/server.rb:156:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/controllers/controller.rb:80:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `send'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `run_command'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:143:in `run!'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/bin/thin:6
+  C:/Ruby187/bin/thin:19:in `load'
+  C:/Ruby187/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:39:09) [POST]
+  Parameters: {"size"=>"2", "commit"=>"Get QRCode", "authenticity_token"=>"GeqdeaEjY6lAdL/k/iYYhb3jgQrWoDVqs6zKnyDAgfg=", "url"=>"http://www.google.com/"}
+
+ActionView::MissingTemplate (Missing template qqs/_show.erb in view path app/views):
+  app/controllers/qqs_controller.rb:18:in `show'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:76:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `catch'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:57:in `process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:42:in `receive_data'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run_machine'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/backends/base.rb:57:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/server.rb:156:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/controllers/controller.rb:80:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `send'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `run_command'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:143:in `run!'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/bin/thin:6
+  C:/Ruby187/bin/thin:19:in `load'
+  C:/Ruby187/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:39:10) [POST]
+  Parameters: {"size"=>"4", "commit"=>"Get QRCode", "authenticity_token"=>"GeqdeaEjY6lAdL/k/iYYhb3jgQrWoDVqs6zKnyDAgfg=", "url"=>"http://www.google.com/"}
+
+ActionView::MissingTemplate (Missing template qqs/_show.erb in view path app/views):
+  app/controllers/qqs_controller.rb:18:in `show'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:76:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `catch'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:57:in `process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:42:in `receive_data'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run_machine'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/backends/base.rb:57:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/server.rb:156:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/controllers/controller.rb:80:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `send'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `run_command'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:143:in `run!'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/bin/thin:6
+  C:/Ruby187/bin/thin:19:in `load'
+  C:/Ruby187/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:39:11) [POST]
+  Parameters: {"size"=>"4", "commit"=>"Get QRCode", "authenticity_token"=>"GeqdeaEjY6lAdL/k/iYYhb3jgQrWoDVqs6zKnyDAgfg=", "url"=>"http://www.google.com/"}
+
+ActionView::MissingTemplate (Missing template qqs/_show.erb in view path app/views):
+  app/controllers/qqs_controller.rb:18:in `show'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:76:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `catch'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:57:in `process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:42:in `receive_data'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run_machine'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/backends/base.rb:57:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/server.rb:156:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/controllers/controller.rb:80:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `send'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `run_command'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:143:in `run!'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/bin/thin:6
+  C:/Ruby187/bin/thin:19:in `load'
+  C:/Ruby187/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:39:13) [POST]
+  Parameters: {"size"=>"8", "commit"=>"Get QRCode", "authenticity_token"=>"GeqdeaEjY6lAdL/k/iYYhb3jgQrWoDVqs6zKnyDAgfg=", "url"=>"http://www.google.com/"}
+
+ActionView::MissingTemplate (Missing template qqs/_show.erb in view path app/views):
+  app/controllers/qqs_controller.rb:18:in `show'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:76:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `catch'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:74:in `pre_process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:57:in `process'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/connection.rb:42:in `receive_data'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run_machine'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/eventmachine-0.12.10-x86-mswin32-60/lib/eventmachine.rb:256:in `run'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/backends/base.rb:57:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/server.rb:156:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/controllers/controller.rb:80:in `start'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `send'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:177:in `run_command'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/lib/thin/runner.rb:143:in `run!'
+  C:/Ruby187/lib/ruby/gems/1.8/gems/thin-1.2.7-x86-mswin32/bin/thin:6
+  C:/Ruby187/bin/thin:19:in `load'
+  C:/Ruby187/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing QqsController#index (for 127.0.0.1 at 2010-10-14 10:40:09) [GET]
+  [4;36;1mQq Load (0.0ms)[0m   [0;1mSELECT * FROM "qqs" [0m
+Rendering template within layouts/qqs
+Rendering qqs/index
+Completed in 188ms (View: 31, DB: 0) | 200 OK [http://localhost/qqs]
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:40:11) [POST]
+  Parameters: {"size"=>"8", "commit"=>"Get QRCode", "authenticity_token"=>"GeqdeaEjY6lAdL/k/iYYhb3jgQrWoDVqs6zKnyDAgfg=", "url"=>"http://www.google.com/"}
+Rendered qqs/_show (0.0ms)
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://localhost/qqs/show]
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:40:14) [POST]
+  Parameters: {"size"=>"2", "commit"=>"Get QRCode", "authenticity_token"=>"GeqdeaEjY6lAdL/k/iYYhb3jgQrWoDVqs6zKnyDAgfg=", "url"=>"http://www.google.com/"}
+Rendered qqs/_show (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/qqs/show]
+
+
+Processing QqsController#show (for 127.0.0.1 at 2010-10-14 10:40:16) [POST]
+  Parameters: {"size"=>"4", "commit"=>"Get QRCode", "authenticity_token"=>"GeqdeaEjY6lAdL/k/iYYhb3jgQrWoDVqs6zKnyDAgfg=", "url"=>"http://www.google.com/"}
+Rendered qqs/_show (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/qqs/show]

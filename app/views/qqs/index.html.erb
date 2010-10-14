@@ -1,0 +1,7 @@
+<%= javascript_include_tag :defaults %>
+<% form_remote_tag :url => {:action => :show} do -%>
+  <div>URL: <%= text_field_tag 'url', 'http://www.google.com/' %></div>
+  <div>Size: <%= select_tag 'size', options_for_select([ "2", "4", "8" ], "2") %> </div>
+  <div><%= submit_tag 'Get QRCode' %></div>
+<% end -%>
+<div id="qrcode"></div>

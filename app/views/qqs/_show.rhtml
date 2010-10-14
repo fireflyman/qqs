@@ -1,0 +1,4 @@
+<h2>Your URL:</h2>
+<p><%= h(@y_url) %></p>
+<h2>Your QR Code:</h2>
+<%= qrcode(h(@y_url), @y_size) %>
